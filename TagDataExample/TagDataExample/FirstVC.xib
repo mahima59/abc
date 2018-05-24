@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstVC" customModule="TagDataExample" customModuleProvider="target">
+            <connections>
+                <outlet property="dataTextField" destination="Vz3-Jm-AME" id="cuq-ZP-uwP"/>
+                <outlet property="nextBtn" destination="mwO-vm-Feg" id="fKq-si-vEE"/>
+                <outlet property="scrollView" destination="aaG-PT-YPQ" id="1p8-an-GpG"/>
+                <outlet property="tagView" destination="PSc-B4-G3A" id="X31-V6-0rw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vz3-Jm-AME">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="247" id="0Kn-5R-pyu"/>
+                        <constraint firstAttribute="height" constant="40" id="dTD-y6-PX4"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0Kn-5R-pyu"/>
+                        </mask>
+                    </variation>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwO-vm-Feg">
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="104" id="Q42-IU-Mgg"/>
+                        <constraint firstAttribute="height" constant="40" id="klb-oF-l1A"/>
+                    </constraints>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Q42-IU-Mgg"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="nextBtnTapped:" destination="-1" eventType="touchUpInside" id="EoH-bj-J6J"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSc-B4-G3A">
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-PT-YPQ"/>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.2639148085767502" blue="0.8834456418786949" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="aaG-PT-YPQ" firstAttribute="leading" secondItem="PSc-B4-G3A" secondAttribute="leading" id="EA2-E7-l6r"/>
+                        <constraint firstAttribute="bottom" secondItem="aaG-PT-YPQ" secondAttribute="bottom" id="FfU-BT-HvA"/>
+                        <constraint firstItem="aaG-PT-YPQ" firstAttribute="top" secondItem="PSc-B4-G3A" secondAttribute="top" id="geD-SF-uEU"/>
+                        <constraint firstAttribute="trailing" secondItem="aaG-PT-YPQ" secondAttribute="trailing" id="tqg-1B-8ED"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PSc-B4-G3A" secondAttribute="trailing" id="INm-3T-2bc"/>
+                <constraint firstItem="Vz3-Jm-AME" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KZ3-5X-246"/>
+                <constraint firstItem="mwO-vm-Feg" firstAttribute="top" secondItem="Vz3-Jm-AME" secondAttribute="bottom" constant="20" id="OBD-sL-4u9"/>
+                <constraint firstItem="mwO-vm-Feg" firstAttribute="width" secondItem="Vz3-Jm-AME" secondAttribute="width" multiplier="0.6" id="Q83-nZ-HRu"/>
+                <constraint firstItem="PSc-B4-G3A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZtW-v1-GAF"/>
+                <constraint firstItem="Vz3-Jm-AME" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="dgo-jj-HGW"/>
+                <constraint firstAttribute="bottom" secondItem="PSc-B4-G3A" secondAttribute="bottom" id="dp4-ma-J8L"/>
+                <constraint firstItem="Vz3-Jm-AME" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="dsn-aE-4yF"/>
+                <constraint firstItem="PSc-B4-G3A" firstAttribute="top" secondItem="mwO-vm-Feg" secondAttribute="bottom" constant="14" id="vzF-j8-dCd"/>
+                <constraint firstItem="mwO-vm-Feg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zSM-PM-TmG"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

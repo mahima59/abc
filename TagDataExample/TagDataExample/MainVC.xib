@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="TagDataExample" customModuleProvider="target">
+            <connections>
+                <outlet property="datatextField" destination="fnF-wW-aZn" id="mf1-hq-gH8"/>
+                <outlet property="nextBtn" destination="jd1-Wb-moH" id="u6I-p0-cdp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnF-wW-aZn">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="Q5W-Jg-nit"/>
+                        <constraint firstAttribute="height" constant="40" id="ylM-tG-P59"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6Iw-dX-klq"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd1-Wb-moH">
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sendBtnTapped:" destination="-1" eventType="touchUpInside" id="DzY-P0-Bz8"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-xy-6NS">
+                    <frame key="frameInset" minY="191" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jd1-Wb-moH" firstAttribute="width" secondItem="fnF-wW-aZn" secondAttribute="width" multiplier="0.5" id="IRV-WC-Ww1"/>
+                <constraint firstItem="jd1-Wb-moH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L7a-vN-1K7"/>
+                <constraint firstItem="jd1-Wb-moH" firstAttribute="height" secondItem="fnF-wW-aZn" secondAttribute="height" id="gXf-QW-CCl"/>
+                <constraint firstItem="fnF-wW-aZn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="htA-yl-r4O"/>
+                <constraint firstItem="fnF-wW-aZn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jz7-Sw-PtX"/>
+                <constraint firstItem="jd1-Wb-moH" firstAttribute="top" secondItem="fnF-wW-aZn" secondAttribute="bottom" constant="23" id="lKU-WC-elI"/>
+            </constraints>
+            <point key="canvasLocation" x="135" y="-143"/>
+        </view>
+    </objects>
+</document>
